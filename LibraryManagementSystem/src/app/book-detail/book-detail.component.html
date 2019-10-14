@@ -1,0 +1,32 @@
+
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title><h2>{{cust.Customer_Name}}</h2></mat-card-title>
+    <mat-card-subtitle>{{cust.Customer_Address}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <dl>
+      <dt>Customer Name:</dt>
+      <dd>{{cust.Customer_Name}}</dd>
+      <dt>Customer LastName:</dt>
+      <dd>{{cust.Customer_LastName}}</dd>
+      <dt>Customer id:</dt>
+      <dd>{{cust.Customer_id}}</dd>
+      <dt>Customer Email:</dt>
+      <dd>{{cust.Customer_Age}}</dd>
+      <dt>Customer Age:</dt>
+      <dd>{{cust.Customer_Email}}</dd>
+      <dt>Customer Gender:</dt>
+      <dd>{{cust.Customer_Gender}}</dd>
+      <dt>Customer ZipCode:</dt>
+      <dd>{{cust.Customer_ZipCode}}</dd>
+      <dt>Customer Address:</dt>
+      <dd>{{cust.Customer_Address}}</dd>
+
+    </dl>
+  </mat-card-content>
+  <mat-card-actions>
+    <a mat-raised-button color="primary" [routerLink]="['/book-edit', cust._id]"><mat-icon>edit</mat-icon></a>
+    <a mat-raised-button color="warn" (click)="deleteBook(cust._id)"><mat-icon>delete</mat-icon></a>
+  </mat-card-actions>
+</mat-card>

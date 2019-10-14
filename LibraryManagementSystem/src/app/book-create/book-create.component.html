@@ -1,0 +1,84 @@
+
+<form [formGroup]="CustomDetailsForm" (ngSubmit)="onFormSubmit(CustomDetailsForm.value)">
+
+  <mat-form-field class="example-full-width">
+    <label>Customer FirstName: </label>
+<br>
+    <input matInput formControlName="Customer_Name"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!CustomDetailsForm.get('Customer_Name').valid && CustomDetailsForm.get('Customer_Name').touched">Please enter Customer Name</span>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <label>Customer LastName:: </label>
+    <input matInput formControlName="Customer_LastName"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!CustomDetailsForm.get('Customer_LastName').valid && CustomDetailsForm.get('Customer_LastName').touched">Please enter Customer LastName</span>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <label>Customer ID: </label>
+    <input matInput formControlName="Customer_id"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!CustomDetailsForm.get('Customer_id').valid && CustomDetailsForm.get('Customer_id').touched">Please enter Customer id</span>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <label>Customer Email: </label>
+    <textarea matInput formControlName="Customer_Email"
+              [errorStateMatcher]="matcher"></textarea>
+    <mat-error>
+      <span *ngIf="!CustomDetailsForm.get('Customer_Email').valid && CustomDetailsForm.get('Customer_Email').touched">Please enter Customer Email</span>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <label>Customer Age: </label>
+    <input matInput formControlName="Customer_Age"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!CustomDetailsForm.get('Customer_Age').valid && CustomDetailsForm.get('Customer_Age').touched">Please enter Customer Age</span>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <label>Customer Gender: </label>
+    <input matInput formControlName="Customer_Gender"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!CustomDetailsForm.get('Customer_Gender').valid && CustomDetailsForm.get('Customer_Gender').touched">Please enter Customer Gender</span>
+    </mat-error>
+  </mat-form-field>
+
+
+  <mat-form-field class="example-full-width">
+    <label>Customer ZipCode: </label>
+    <input matInput formControlName="Customer_ZipCode"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!CustomDetailsForm.get('Customer_ZipCode').valid && CustomDetailsForm.get('Customer_ZipCode').touched">Please enter Customer ZipCode</span>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <label>Customer Address: </label>
+    <input matInput formControlName="Customer_Address"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!CustomDetailsForm.get('Customer_Address').valid && CustomDetailsForm.get('Customer_Address').touched">Please enter Customer Address</span>
+    </mat-error>
+  </mat-form-field>
+
+
+  <div class="button-row">
+    <button type="submit" [disabled]="!CustomDetailsForm.valid" mat-raised-button color="primary">
+      <mat-icon>save</mat-icon>
+    </button>
+  </div>
+</form>

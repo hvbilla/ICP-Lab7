@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+
+body { margin: 0 5%;
+  background-image: url('https://cdn.hipwallpaper.com/i/62/34/qHphPl.jpg');
+  background-size: cover; /* Resize the background image to cover the entire container */
+
+}
